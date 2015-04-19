@@ -5,13 +5,17 @@
 })
 
 @Template({
-    inline: '<h1>Hello {{ name }}</h1>'
+    url: 'app.html'
 })
 
 class MyAppComponent {
     constructor(){
         this.name = 'Rodrigo';
     }
+
+    changeName($event, first){
+        this.name = first.value;
+    };
 }
 
 bootstrap(MyAppComponent);
